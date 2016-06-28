@@ -1,8 +1,12 @@
 package br.com.caelum.financas.util;
 
 import br.com.caelum.financas.modelo.Conta;
+import br.com.caelum.financas.modelo.Movimentacao;
+import br.com.caelum.financas.modelo.TipoMovimentacao;
 
 import javax.persistence.EntityManager;
+import java.math.BigDecimal;
+import java.util.Calendar;
 
 /**
  * Created by Faqtt0 on 28/06/2016.

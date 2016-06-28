@@ -1,6 +1,7 @@
 package br.com.caelum.financas.modelo;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Faqtt0 on 24/06/2016.
@@ -14,6 +15,16 @@ public  class Conta {
     private String numero;
     private String banco;
     private String agencia;
+    @OneToMany(mappedBy = "conta")
+    private List<Movimentacao> movimentacoes;
+
+    public List<Movimentacao> getMovimentacoes() {
+        return movimentacoes;
+    }
+
+    public void setMovimentacoes(List<Movimentacao> movimentacoes) {
+        this.movimentacoes = movimentacoes;
+    }
 
     public Integer getId() {
         return id;

@@ -7,6 +7,13 @@ import java.util.Calendar;
 /**
  * Created by Faqtt0 on 28/06/2016.
  */
+
+@NamedQueries({
+        @NamedQuery(name="mediaDaContaPeloTipoMovimentacao",
+                query="select avg(m.valor) from Movimentacao m where m.conta=:pConta and m.tipoMovimentacao = :pTipo") ,
+        @NamedQuery(name="totalDeMovimentacoes",
+                query="select count(m) from Movimentacao m where m.conta = :pConta")
+})
 @Entity
 public class Movimentacao {
 
